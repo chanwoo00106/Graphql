@@ -1,0 +1,9 @@
+type Chan {
+  name: String!
+  age: Int!
+  description: String!
+}
+
+type Query {
+  person: Chan!
+}
