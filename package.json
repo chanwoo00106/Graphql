@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/chanwoo00106/Graphql#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "graphql-yoga": "^1.18.3"
   },
   "devDependencies": {
