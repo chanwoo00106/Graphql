@@ -1,4 +1,6 @@
-import movies from "../db/movies";
+import db from "../db/movies";
+
+let movies = db;
 
 const resolvers = {
   Query: {
@@ -20,6 +22,21 @@ const resolvers = {
       };
       movies.push(newMovie);
       return newMovie;
+    },
+    movieDelete: (_, { id }) => {
+      const clear = movies.filter((i) => i.id !== id);
+      if (movies.length > clear.length) {
+        const movie = movies.filter((i) => i.id === id);
+        movies = clear;
+        return movie[0];
+      }
+      return null;
+    },
+    updateMovie: (_, { id, name, rating }) => {
+      const index = movies.findIndex((i) => i.id === id);
+      if (name) movies[index].name = name;
+      if (rating) movies[index].rating = rating;
+      return movies[index];
     },
   },
 };

@@ -14,6 +14,8 @@ const typeDefs = gql`
 
   type Mutation {
     addMovie(name: String!, rating: Int!): Movie!
+    movieDelete(id: Int!): Movie!
+    updateMovie(id: Int!, name: String, rating: Int): Movie!
   }
 `;
 export default typeDefs;

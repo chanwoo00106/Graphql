@@ -1,4 +1,4 @@
-const movies = [
+let db = [
   {
     id: 1,
     name: "백두산",
@@ -21,4 +21,4 @@ const movies = [
   },
 ];
 
-export default movies;
+export default db;
